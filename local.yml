@@ -2,6 +2,15 @@ version: "3.9"
 
 services:
 
+    elastic-search:
+        image: elasticsearch:7.17.9
+        environment:
+            - discovery.type=single-node
+        ports:
+            - "9200:9200"
+        networks:
+            - ego-motors-api
+
     django:
         build:
             context: .
@@ -17,6 +26,7 @@ services:
             - ./.envs/.local/.postgres
         depends_on:
             - postgres
+            - elastic-search
         command: /start
         networks:
             - ego-motors-api
