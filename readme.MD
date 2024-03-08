@@ -1,6 +1,6 @@
 # EGO Motors - API
 
-![1709857916696](image/readme/1709857916696.png)
+![1709858493383](image/readme/1709858493383.png)
 
 ## Descripción
 
