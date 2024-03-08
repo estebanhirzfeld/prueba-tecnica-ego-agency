@@ -63,7 +63,7 @@ Este proyecto es una API simple para la gestión de una agencia de autos, utiliz
 ## Ejecución
 
 1. En la terminal, navega hasta el directorio raíz del proyecto si aún no lo has hecho.
-2. Ejecuta el siguiente comando para iniciar el servidor de desarrollo:
+2. Ejecute el siguiente comando para iniciar el servidor de desarrollo:
 
    ### Comando para iniciar el servidor de desarrollo de Django
 
@@ -73,8 +73,20 @@ Este proyecto es una API simple para la gestión de una agencia de autos, utiliz
    python manage.py runserver 8080   # Comando para iniciar el servidor de desarrollo de Django en el puerto 8080
 
    ```
-3. Abre un navegador web y navega a `http://127.0.0.1:8080/` para ver la aplicación en funcionamiento.
-4. En la seccion `http://127.0.0.1:8080/redoc/` podra ver los endpoints de la API de forma grafica.
+3. Ejecute el siguiente comando para iniciar las migraciones correspondientes:
+
+   ```
+       python manage.py migrate
+   ```
+4. Abra un navegador web y navegue a `http://127.0.0.1:8080/` para ver la aplicación en funcionamiento.
+5. Si desea acceder al panel de administración de Django, este se encontrará en la sección `http://127.0.0.1:8080/ego-motors-admin/`
+6. para acceder necesitará permisios de superusuario, si desea crear uno podra ejecutar el comando:
+
+```
+    python manage.py createsuperuser
+```
+
+7. En la seccion `http://127.0.0.1:8080/redoc/` podra ver los endpoints de la API de forma grafica.
 
 ## Instalación y Ejecución con Docker
 
@@ -100,6 +112,8 @@ Este proyecto es una API simple para la gestión de una agencia de autos, utiliz
 
 DATABASES = {"default": env.db("DATABASE_URL")}
 ```
+
+Esto es escencial para que nuestro servicio de Django pueda conectarse a la base de datos de del servicio PostgreSQL.
 
 ## Makefile
 
