@@ -88,7 +88,7 @@ Este proyecto es una API simple para la gestión de una agencia de autos, utiliz
 
   Esto es escencialmente util si no se quiere instalar ni configurar muchas dependencias, a su vez mejora la capacidad de adaptacion a futuros miembros para contribuir en el mismo
 
-  **IMPORTANTE modificar a partir de la linea 87 a la 94 modificar de la siguiente manera:**
+  **IMPORTANTE modificar a partir de la linea 87 a la 94 de la siguiente manera:**
 
 ```
 # DATABASES = {
