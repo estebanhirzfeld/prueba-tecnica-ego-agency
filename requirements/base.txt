@@ -9,5 +9,5 @@ drf-yasg>=1.21.5
 Pillow>=9.4.0
 argon2-cffi>=21.3.0
 pytz>=2022.7.1
-django-elasticsearch-dsl>=7.3.0
-django-elasticsearch-dsl-drf>=0.22.5
+django-elasticsearch-dsl==7.3.0
+django-elasticsearch-dsl-drf==0.22.5
