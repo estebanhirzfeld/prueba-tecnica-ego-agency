@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
@@ -25,6 +25,16 @@ urlpatterns = [
 
     # Admin Panel
     path(settings.ADMIN_URL, admin.site.urls),
+
+    #Vehicles
+    path("api/v1/vehicles/", include("apps.vehicle.urls")),
+
+    #Vehicle Types
+    path("api/v1/vehicles-types/", include("apps.vehicle_type.urls")),
+
+    # Search
+    path("api/v1/search/", include("apps.search.urls")),
+
 
 ]
 
